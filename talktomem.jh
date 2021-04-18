@@ -1,0 +1,47 @@
+
+application {
+  config {
+    baseName talaktome,
+    applicationType gateway,
+    packageName com.talktomem,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName talktomem1,
+    applicationType microservice,
+    packageName com.talktomem,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities A, B
+}
+
+application {
+  config {
+    baseName talktomem2,
+    applicationType microservice,
+    packageName com.talktomem2,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities C
+}
+
+entity A {}
+
+entity B {}
+
+entity C {}
+
+entity D {}
+
+relationship OneToMany {
+  A to B
+}
+    
