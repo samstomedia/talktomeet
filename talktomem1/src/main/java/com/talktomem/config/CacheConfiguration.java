@@ -46,9 +46,6 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
-            createCache(cm, com.talktomem.domain.A.class.getName());
-            createCache(cm, com.talktomem.domain.A.class.getName() + ".bs");
-            createCache(cm, com.talktomem.domain.B.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
